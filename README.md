@@ -25,5 +25,5 @@ GTEMPcenter<br>
 若不如此引入的文件是teamplates文件夹下的文件<br>
 创建index.php文件写控制器完成后加入$GTEMP='模版文件名';require_once './gtemp/function.php';<br>
 即可展示模版<br>
-v0.7后增加了控制器强制编译机制,如模版需要实时更新则需在引入文件之前设置变量$GTEMP_CACHING=true;<br>
+v0.7后增加了控制器强制编译机制,如模版需要实时更新则需在引入文件之前设置变量$GTEMP_CACHING=false;<br>
 
