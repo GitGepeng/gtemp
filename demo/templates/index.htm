@@ -1,0 +1,23 @@
+<!--{include "header.htm"}-->
+<style>
+.box{
+	width: 960px;
+	margin: auto;
+	overflow: hidden;
+	border: 1px solid #cdcdcd;
+}
+</style>
+<h1><!--{$title}--></h1>
+<div class="box">
+	<!--{if $dir=="index"}-->
+		您现在看到的文件是<!--{$dir}-->
+	<!--{else}-->
+		不显示
+	<!--{/if}-->
+	<br>
+	<!--{foreach $array $v }-->
+	<!--{$v@key}-->:<!--{$v}--><br>
+	<!--{/foreach}-->
+</div>
+<!--{include "footer.htm"}-->
+
