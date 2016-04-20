@@ -26,5 +26,5 @@ GTEMPcenter<br>
 注：如需模版分类则需在templates文件夹下建立分类文件夹,并且$GTEMP和include语句也得用"分类/模版名"来引入分类模版<br>
 若不如此引入的文件是teamplates文件夹下的文件<br>
 创建index.php文件写控制器完成后加入$GTEMP='模版文件名';require_once './gtemp/function.php';即可展示模版<br>
-v0.70后增加了控制器强制编译机制,如模版需要实时更新则需在引入文件之前设置变量$GTEMP_CACHING=false;
+v0.70后增加了控制器强制编译机制,如模版需要实时更新则需在引入文件之前设置变量$GTEMP_CACHING=false;<br>
 具体可参考demo文件夹下内容,并注意引用文件的目录。
