@@ -17,8 +17,8 @@ if($_GET||$_POST){
 $_G=$_GET;
 $_P=$_POST;
 }else{
-$_G='';
-$_P='';
+$_G=0;
+$_P=0;
 }
 //自加载所有变量并清楚Notice报错
 foreach ($GTEMPauto as $key => $value) {
