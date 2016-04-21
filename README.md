@@ -9,7 +9,7 @@ Gtemp自加载模版引擎-本引擎由Gp独自开发创作,未经许可不可�
 1.不可在PHP中使用变量如下<br>
 $_G<br>
 $_P<br>
-$GTEMP<br>
+$GTEMP 和 $gtemp<br>
 $GTEMPcontent<br>
 $GTEMPauto<br>
 $GTEMP_CACHING<br>
