@@ -23,16 +23,16 @@ $_P='';
 //自加载所有变量并清楚Notice报错
 foreach ($GTEMPauto as $key => $value) {
 	if(!empty($$value)){
-	$smarty->assign($value,$$value);
+	$gtemp->assign($value,$$value);
 	}else{
 		$$value="";
-		$smarty->assign($value,$$value);
+		$gtemp->assign($value,$$value);
 	}
 }
 $gtemp->assign('_G',$_G);
 $gtemp->assign('_P',$_P);
 //展示模版
-$smarty->display($GTEMP);
+$gtemp->display($GTEMP);
 //自定义函数-清除非匹配项
 function GTEMPcleans($nr){
 	$nr=preg_replace('/\n/','',$nr);
@@ -52,7 +52,7 @@ function GTEMPcleans($nr){
 //自定义函数-取中间文本
 function GTEMPcenter($nr,$pre="<!--{",$lst="}-->"){
 	$nr=preg_replace('/'.$pre.'/','',$nr);
-	$nr=preg_replace('/'.$lst.'/','  $'.md5("gpsmartyendmark"),$nr);
+	$nr=preg_replace('/'.$lst.'/','  $'.md5("gpgtempendmark"),$nr);
 	$nr=preg_replace('/\s+\w+\s/','', $nr);
 	$nr=preg_replace('/\s+\/+\w+\s/','', $nr);
 	return $nr;
