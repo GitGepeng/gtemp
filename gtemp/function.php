@@ -12,6 +12,14 @@ $GTEMPcontent=GTEMPcenter($GTEMPcontent);
 $GTEMPcontent=strip_tags($GTEMPcontent);
 $GTEMPcontent=GTEMPcleans($GTEMPcontent);
 $GTEMPauto=explode('$',$GTEMPcontent);
+//自加载POST和GET
+if($_GET||$_POST){
+$_G=$_GET;
+$_P=$_POST;
+}else{
+$_G='';
+$_P='';
+}
 //自加载所有变量并清楚Notice报错
 foreach ($GTEMPauto as $key => $value) {
 	if(!empty($$value)){
@@ -21,6 +29,8 @@ foreach ($GTEMPauto as $key => $value) {
 		$smarty->assign($value,$$value);
 	}
 }
+$gtemp->assign('_G',$_G);
+$gtemp->assign('_P',$_P);
 //展示模版
 $smarty->display($GTEMP);
 //自定义函数-清除非匹配项
