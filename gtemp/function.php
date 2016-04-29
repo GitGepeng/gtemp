@@ -36,6 +36,7 @@ $gtemp->display($GTEMP);
 //自定义函数-清除非匹配项
 function GTEMPcleans($nr){
 	$nr=preg_replace('/\n/','',$nr);
+	//echo $nr -DEBUG;
 	$nr=preg_replace('/ /','',$nr);
 	$nr=preg_replace('/==[0-9]/','', $nr);
 	$cl=array('foreach','\/foreach','if','\/if','include','\=','\/','\:','\!','\&');
@@ -52,7 +53,7 @@ function GTEMPcleans($nr){
 //自定义函数-取中间文本
 function GTEMPcenter($nr,$pre="<!--{",$lst="}-->"){
 	$nr=preg_replace('/'.$pre.'/','',$nr);
-	$nr=preg_replace('/'.$lst.'/','  $'.md5("gpgtempendmark"),$nr);
+	$nr=preg_replace('/'.$lst.'/','  $'.md5("gpgtempendmark").'  $',$nr);
 	$nr=preg_replace('/\s+\w+\s/','', $nr);
 	$nr=preg_replace('/\s+\/+\w+\s/','', $nr);
 	return $nr;

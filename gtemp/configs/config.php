@@ -1,5 +1,5 @@
 <?php
-require dirname(dirname(__FILE__)).'\gtemp\libs\Smarty.class.php';//设置smarty核心文件目录
+require dirname(dirname(__FILE__)).'\Smarty\libs\Smarty.class.php';//设置smarty核心文件目录
 $gtemp = new Smarty;//创建gtemp对象
 $gtemp->cache_dir = dirname(dirname(__FILE__)).'/cache'; //设置缓存目录
 if(isset($GTEMP_CACHING))

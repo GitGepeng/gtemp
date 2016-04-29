@@ -7,4 +7,5 @@ $array = array('id' =>0 ,'title'=>'Gp自加载模版引擎','author'=>'Gp', );
 $GTEMP="index.htm";
 $GTEMP_CACHING=false;//设置为强迫编译
 require_once '../gtemp/function.php';
+$gtemp->display('gp.html');
 ?>
